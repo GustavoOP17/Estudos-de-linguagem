@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Infernal</title>
+  <style>
+    body {
+      background: repeating-linear-gradient(45deg, red, black 10px);
+      color: lime;
+      font-family: "Comic Sans MS", cursive;
+      cursor: progress;
+      overflow: hidden;
+      animation: shake 0.3s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(0px, 0px); }
+      25% { transform: translate(5px, 5px); }
+      50% { transform: translate(-5px, -5px); }
+      75% { transform: translate(5px, -5px); }
+      100% { transform: translate(-5px, 5px); }
+    }
+
+    .login-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      border: 5px dashed magenta;
+      padding: 50px;
+      background: linear-gradient(to right, orange, purple);
+      box-shadow: 0 0 50px yellow;
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    input {
+      padding: 20px;
+      border: none;
+      font-size: 24px;
+      background-color: cyan;
+      color: black;
+      margin: 20px;
+      transform: rotate(-15deg);
+    }
+
+    button {
+      padding: 20px 40px;
+      font-size: 32px;
+      background-color: black;
+      color: white;
+      border: 5px dotted red;
+      cursor: not-allowed;
+    }
+
+    button:hover {
+      background-color: red;
+      color: yellow;
+      animation: explode 0.5s infinite;
+    }
+
+    @keyframes explode {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.5); }
+      100% { transform: scale(1); }
+    }
+
+    .popup {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: black;
+      color: white;
+      padding: 10px;
+      border: 2px solid red;
+      animation: fadeInOut 3s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="popup">⚠️ Seu tempo está se esgotando...</div>
+  <div class="login-container">
+    <h1>BEM-VINDO AO CAOS 🔥</h1>
+    <input type="text" placeholder="Usuário??" />
+    <br />
+    <input type="password" placeholder="Senha... ou não?" />
+    <br />
+    <button disabled>Entrar (talvez)</button>
+  </div>
+</body>
+</html>
