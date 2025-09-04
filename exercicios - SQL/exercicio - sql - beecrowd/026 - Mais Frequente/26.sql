@@ -1,0 +1,1 @@
+SELECT COUNT(*) as most_frequent_value
